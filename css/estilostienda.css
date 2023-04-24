@@ -1,0 +1,48 @@
+#productos {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+}
+
+.sesionIzquierda {
+    float: left;
+    padding: 5px;
+    margin: 20px;
+}
+
+.sesionDerecha {
+    float: right;
+    padding: 5px;
+    margin: 20px;
+}
+
+.imagenProducto {
+    width: 300px;
+    height: auto;
+}
+
+#busqueda {
+    padding: 10px;
+    margin: 10px;
+}
+
+#botonBuscar {
+    float: right;
+}
+
+#filtro {
+    float: left;
+}
+
+.infoProducto {
+    text-align: center;
+}
+
+#img4Maschica {
+    height: 300px;
+}
+
+#tarjetas {
+    padding: 15px;
+    margin-left: 20px;
+}

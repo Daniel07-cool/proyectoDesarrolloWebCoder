@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/estilostienda.css">
+    <style>
+        .estoyEn {
+            background-color:#68bbf1;
+        }
+    </style>
+    <title>Tienda</title>
+</head>
+<body>
+    <header>
+        <aside id="logo">Rayito de luna</aside>
+        <nav id="navegacionMenu">
+            <ul id="menuPrincipal">
+                <li class="ventanaPrincipal"><a href="../index.html" class="enlaceBarra">Inicio</a></li>
+                <li class="ventanaPrincipal"><a href="./clinica.html" class="enlaceBarra">Clínica</a></li>
+                <li class="ventanaPrincipal"><a href="./ong.html" class="enlaceBarra">ONG's</a></li>
+                <li class="ventanaPrincipal"><a href="./tienda.html" class="enlaceBarra estoyEn">Tienda</a></li>
+                <li class="ventanaPrincipal"><a href="#pieDePagina" class="enlaceBarra">Contacto</a></li>
+                <li class="ventanaPrincipal"><a href="./acceder.html" class="enlaceBarra">Acceder</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="busqueda">
+            <input type="search" placeholder="Buscar producto" id="botonBuscar">
+            <select id="filtro">
+                <option value="filtrarPor" selected>Filtrar por</option>
+                <option value="alimentos">Alimentos</option>
+                <option value="collares">Collares</option>
+            </select>
+        </div>
+        <div id="productos">
+            <div class="sesionIzquierda">
+                <img class="imagenProducto" src="../img/comidaPerro.png" alt="Ración Pedigree Adultos">
+                <p class="infoProducto">Ración Pedigree Adultos</p>
+                <p class="infoProducto">$329</p>
+            </div>
+            <div class="sesionIzquierda">
+                <img class="imagenProducto" src="../img/arnex.jpg" alt="Pretal Doris Ajustable">
+                <p class="infoProducto">Pretal Doris Ajustable</p>
+                <p class="infoProducto">$350</p>
+            </div>
+            <div class="sesionDerecha">
+                <img id="img4Maschica" class="imagenProducto" src="../img/comidaGato.png" alt="Ración Maxine Adultos">
+                <p class="infoProducto">Ración Maxine Adultos</p>
+                <p class="infoProducto">$480</p>
+            </div>
+            <div class="sesionDerecha">
+                <img class="imagenProducto" src="../img/cajaTransporte.jpg" alt="Transportador para felino">
+                <p class="infoProducto">Transportador para felino</p>
+                <p class="infoProducto">$1209</p>
+            </div>
+        </div>
+        <div id="tarjetas">
+            <img src="../img/tarjetas.png" alt="Imagen Tarjetas aceptadas">
+        </div>  
+    </main>
+    <footer id="pieDePagina">
+        <div id="redes">
+            <a href="https://www.facebook.com/" class="enlaceRedes"><i class="fa-brands fa-facebook logoRedes" >    Rayito de Luna</i></a>
+            <a href="https://www.instagram.com/" class="enlaceRedes"><i class="fa-brands fa-square-instagram logoRedes">    rayito_de_luna.uy</i></a>
+            <a href="https://web.whatsapp.com/" class="enlaceRedes"><i class="fa-brands fa-whatsapp logoRedes"> +598 099123456</i></a>
+            <a href="https://outlook.live.com/" class="enlaceRedes"><i class="fa-regular fa-envelope logoRedes">    rayito_de_luna@gmail.com</i></a>  
+        </div>
+        <div id="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209591.65984420833!2d-56.33755726373866!3d-34.834368858586835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1680196265748!5m2!1ses-419!2suy" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+    <a href="#" id="subir">
+        <i class="fa-duotone fa-caret-up"></i>
+    </a>
+    
+</body>
+</html>

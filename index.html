@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .estoyEn {
+            background-color:#68bbf1;
+        }
+    </style>
+    <title>Rayito de luna</title>
+</head>
+<body>
+    <header>
+        <aside id="logo">Rayito de luna</aside>
+        <nav id="navegacionMenu">
+            <ul id="menuPrincipal">
+                <li class="ventanaPrincipal"><a href="./index.html" class="enlaceBarra estoyEn">Inicio</a></li>
+                <li class="ventanaPrincipal"><a href="./menu/clinica.html" class="enlaceBarra">Clínica</a></li>
+                <li class="ventanaPrincipal"><a href="./menu/ong.html" class="enlaceBarra">ONG's</a></li>
+                <li class="ventanaPrincipal"><a href="./menu/tienda.html" class="enlaceBarra">Tienda</a></li>
+                <li class="ventanaPrincipal"><a href="#pieDePagina" class="enlaceBarra">Contacto</a></li>
+                <li class="ventanaPrincipal"><a href="./menu/acceder.html" class="enlaceBarra">Acceder</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="cuerpoPrincipal">
+        <div id="sesion1">
+            <img src="./img/241a4d33-grafica_perros.jpg" alt="Noticia sobre perros" class="imgNoticia">
+            <form class="comentarios">
+                <textarea cols="30" rows="10" placeholder="Escriba su comentario" id="ingComent"></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <div id="sesion2">
+            <img src="./img/noticia2.png" alt="Noticia sobre castraciones" class="imgNoticia">
+            <form class="comentarios">
+                <fieldset id="registroComentarios">
+                    <legend>Últimos comentarios</legend>
+                    <br>
+                    ¡Excelente noticia!     22/01/2023
+                    <br><br>
+                    Muy buena atención.     30/03/2023
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer id="pieDePagina">
+        <div id="redes">
+            <a href="https://www.facebook.com/" class="enlaceRedes"><i class="fa-brands fa-facebook logoRedes" >    Rayito de Luna</i></a>
+            <a href="https://www.instagram.com/" class="enlaceRedes"><i class="fa-brands fa-square-instagram logoRedes">    rayito_de_luna.uy</i></a>
+            <a href="https://web.whatsapp.com/" class="enlaceRedes"><i class="fa-brands fa-whatsapp logoRedes"> +598 099123456</i></a>
+            <a href="https://outlook.live.com/" class="enlaceRedes"><i class="fa-regular fa-envelope logoRedes">    rayito_de_luna@gmail.com</i></a>  
+        </div>
+        <div id="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209591.65984420833!2d-56.33755726373866!3d-34.834368858586835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1680196265748!5m2!1ses-419!2suy" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+    <a href="#" id="subir">
+        <i class="fa-duotone fa-caret-up"></i>
+    </a>
+</body>
+</html>

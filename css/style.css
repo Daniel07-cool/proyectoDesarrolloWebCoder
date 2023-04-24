@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    background-image: url(../img/portada.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    background-attachment: fixed;
+    height: 400px;
+}
+
+
+#logo {
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #000;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#navegacionMenu {
+    font-size: 25px;
+}
+
+.ventanaPrincipal {
+    display: inline-block;
+    padding: 5px;
+    margin: 270px 10px 0px 10px;
+}
+
+.enlaceBarra {
+    color: #333;
+    text-decoration: none;
+}
+
+.enlaceBarra:hover {
+    color: #c71414;
+}
+
+.enlaceBarra:focus {
+    color: #c71414;
+}
+
+#cuerpoPrincipal {
+    display: inline-block;
+}
+
+.imgNoticia {
+    float: left;
+    width: 800px;
+    height: auto;
+    padding: 20px;
+}
+
+.comentarios {
+    float: right;
+    margin-left: 280px;
+    margin-top: 40px;
+    padding: 5px;
+}
+
+#registroComentarios {
+    height: 120px;
+    width: 300px;
+}
+
+#pieDePagina {
+    background-color: #68bbf1; 
+    height: 330px;
+}
+
+#redes {
+    float: left;
+    padding: 10px;
+    font-size: 18px;
+}
+
+#mapa {
+    float: right;
+    padding: 10px;
+}
+
+.logoRedes {
+    display: block;
+    padding: 5px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.enlaceRedes {
+    text-decoration: none;
+}
+
+#subir {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background-color: #0a96f3;;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+

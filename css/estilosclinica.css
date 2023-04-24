@@ -1,0 +1,42 @@
+#fotoGato {
+    height: 400px;
+    width: auto;
+    float: left;
+    padding: 10px;
+    margin: 20px;
+}
+
+#infoMascota {
+    float:inherit;
+}
+
+.reservas {
+    padding: 10px;
+    margin: 20px;
+    margin-left: 170px;
+}
+
+#tablaMascota {
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}
+
+.listaSocio {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    border: solid 1px black;
+}
+
+.listaSocio:hover {
+    color: #c71414;
+}
+
+.listaSocio:focus {
+    color: #c71414;
+}
