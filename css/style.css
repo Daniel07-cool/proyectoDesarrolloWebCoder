@@ -9,6 +9,26 @@ html {
     scroll-behavior: smooth;
 }
 
+.contenedorCarrosel {
+    width: 500px;
+    height: auto;
+}
+
+.logoONG {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.logoTexto {
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+
 
 .portada {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -70,6 +90,10 @@ main {
 
 .registroComentarios {
     border: solid 1px black;
+}
+
+.tarjetas {
+    margin: 0 auto;
 }
 
 
@@ -168,6 +192,21 @@ main {
         justify-content: center;
     }
 
+    .contenedorCarrosel {
+        width: 250px;
+    }
+   
+    .logoONG {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .logoTexto {
+        width: 200px;
+        height: 270px;
+    }
+    
+
 
 }
 
@@ -215,6 +254,20 @@ main {
     .busqueda {
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    .contenedorCarrosel {
+        width: 500px;
+    }
+   
+    .logoONG {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .logoTexto {
+        width: 300px;
+        height: 200px;
     }
 
     #facebook::after {
@@ -272,6 +325,22 @@ main {
     .productos {
         grid-template-columns: repeat(4, 220px);
         grid-gap: 20px;
+    }
+
+    .contenedorCarrosel {
+        width: 700px;
+    }
+   
+    .logoONG {
+        width: 500px;
+        height: 500px;
+    }
+    
+    .logoTexto {
+        width: 500px;
+        height: 250px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
     }
 }
 

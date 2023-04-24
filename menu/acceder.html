@@ -4,59 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/estilos.css">
-    <style>
-        .estoyEn {
-            background-color:#68bbf1;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Inicio Sesión</title>
 </head>
 <body>
-    <header>
-        <aside class="logo">Rayito de luna</aside>
-        <nav>
-            <ul class="menuPrincipal">
-                <li class="ventanaPrincipal"><a href="../index.html" class="ventanas">Inicio</a></li>
-                <li class="ventanaPrincipal"><a href="./clinica.html" class="ventanas">Clínica</a></li>
-                <li class="ventanaPrincipal"><a href="./ong.html" class="ventanas">ONG's</a></li>
-                <li class="ventanaPrincipal"><a href="./tienda.html" class="ventanas">Tienda</a></li>
-                <li class="ventanaPrincipal"><a href="#pieDePagina" class="ventanas">Contacto</a></li>
-                <li class="ventanaPrincipal"><a href="./acceder.html" class="ventanas estoyEn">Acceder</a></li>
-            </ul>
+    <header class="portada">
+        <img src="../img/portada.jpeg" alt="portada" class="img-fluid">
+        <nav class="navbar navbar-expand-sm bg-secondary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse row" id="collapsibleNavbar">
+                    <ul class="navbar-nav menuLista">
+                        <li class="nav-item">
+                            <a href="../index.html" class="menuEnlace nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./clinica.html" class="menuEnlace nav-link">Clínica</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./ong.html" class="menuEnlace nav-link">ONG's</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./tienda.html" class="menuEnlace nav-link">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#pieDePagina" class="menuEnlace nav-link">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./acceder.html" class="menuEnlace nav-link">Acceder</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
-        <form id="ingresoForm" method="post" enctype="text/plain">
-            <label class="titulo">Iniciar sesión</label>
-            <br>
-            <input class="usuario" type="email" placeholder="Correo electrónico" required>
-            <br>
-            <input class="usuario" type="password" placeholder="Contraseña" required>
-            <br>
-            <input class="botonIngreso" type="submit">Ingresar</button>
-            <br><br>
-            <a href="#">Olvide mi contraseña</a>
-            <br>
-            <a href="#">Registrarse ahora</a>
-        </form>
+        <form action="/action_page.php">
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label">Correo electrónico:</label>
+              <input type="email" class="form-control" id="email" placeholder="Ingrese su correo" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Ingrese su contraseña" name="pswd">
+            </div>
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+            <div class="form-check mb-3">
+                <a href="#">Olvide mi contraseña</a>
+                <br>
+                <a href="#">Registrarse ahora</a>
+            </div>
+          </form>
     </main>
 
     <footer id="pieDePagina">
-        <div class="redes">
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook redes" ></i></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram redes"></i></a>
-            <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp redes"></i></a>
-            <a href="https://outlook.live.com/"><i class="fa-regular fa-envelope redes"></i></a>  
-        </div>
-        <div class="mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209591.65984420833!2d-56.33755726373866!3d-34.834368858586835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1680196265748!5m2!1ses-419!2suy" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <section class="redes">
+            <a href="https://www.facebook.com/" class="enlaceRedes"><i class="fa-brands fa-facebook logoRedes"
+                    id="facebook"></i></a>
+            <a href="https://www.instagram.com/" class="enlaceRedes"><i class="fa-brands fa-square-instagram logoRedes"
+                    id="instagram"></i></a>
+            <a href="https://web.whatsapp.com/" class="enlaceRedes"><i class="fa-brands fa-whatsapp logoRedes"
+                    id="whatsapp"></i></a>
+            <a href="https://outlook.live.com/" class="enlaceRedes"><i class="fa-regular fa-envelope logoRedes"
+                    id="correo"></i></a>
+        </section>
+        <section class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209591.65984420833!2d-56.33755726373866!3d-34.834368858586835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1680196265748!5m2!1ses-419!2suy"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="img-fluid"></iframe>
+        </section>
     </footer>
-    <a href="#" class="subir">
+    <a href="#" id="subir">
         <i class="fa-duotone fa-caret-up"></i>
     </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
     
 </body>
 </html>
