@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,97 +9,92 @@ html {
     scroll-behavior: smooth;
 }
 
-header {
-    text-align: center;
+
+.portada {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #333;
-    background-image: url(../img/portada.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 100%;
-    background-attachment: fixed;
-    height: 400px;
+    height: auto;
 }
 
-
-#logo {
-    text-transform: uppercase;
-    text-shadow: 0 0 5px #000;
-    font-weight: bold;
-    font-size: 30px;
+.menuLista {
+    display: flex;
+    justify-content: space-around;
 }
 
-#navegacionMenu {
-    font-size: 25px;
-}
-
-.ventanaPrincipal {
-    display: inline-block;
-    padding: 5px;
-    margin: 270px 10px 0px 10px;
-}
-
-.enlaceBarra {
-    color: #333;
+.menuEnlace {
+    color: #fff;
     text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.enlaceBarra:hover {
+.menuEnlace:hover {
     color: #c71414;
 }
 
-.enlaceBarra:focus {
+.menuEnlace:focus {
     color: #c71414;
 }
 
-#cuerpoPrincipal {
-    display: inline-block;
+.fa-bars {
+    color: #fff;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
 .imgNoticia {
-    float: left;
-    width: 800px;
-    height: auto;
-    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.comentarios {
-    float: right;
-    margin-left: 280px;
-    margin-top: 40px;
+
+
+.botonEnviar {
+    background-color: #1c65a8;
+    color: white;
+    width: 215px;
+    padding: 5px;
+    font-size: 18px
+}
+
+.registroComentarios {
+    border: solid 1px black;
+}
+
+
+
+#pieDePagina {
+    background-color: #68bbf1;
+    display: grid;
+    grid-template-rows: 100%
+}
+
+.mapa {
+    grid-column: 3;
     padding: 5px;
 }
 
-#registroComentarios {
-    height: 120px;
-    width: 300px;
-}
-
-#pieDePagina {
-    background-color: #68bbf1; 
-    height: 330px;
-}
-
-#redes {
-    float: left;
-    padding: 10px;
-    font-size: 18px;
-}
-
-#mapa {
-    float: right;
-    padding: 10px;
+.redes {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .logoRedes {
-    display: block;
     padding: 5px;
     color: #fff;
-    margin-bottom: 10px;
-}
-
-.enlaceRedes {
-    text-decoration: none;
+    margin-bottom: 8px;
 }
 
 #subir {
@@ -108,7 +103,7 @@ header {
     position: fixed;
     right: 50px;
     bottom: 50px;
-    background-color: #0a96f3;;
+    background-color: #0a96f3;
     color: #fff;
     text-align: center;
     line-height: 40px;
@@ -116,3 +111,183 @@ header {
 }
 
 
+
+
+
+@media only screen and (min-width:330px) {
+    .comentarios {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #pieDePagina {
+        grid-template-columns: 1fr 1fr 4fr 10px;
+    }
+
+    #subir {
+        right: 15px;
+    }
+
+    .fotoPerfil {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .fotoTini {
+        width: auto;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .reservas {
+        width: 125px;
+        background-color: #1c65a8;
+        color: white;
+        padding: 5px;
+    }
+
+
+    .busqueda {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+
+    .fotoprod {
+        width: 100px;
+    }
+    
+    .productos {
+        display: grid;
+        grid-template-columns: 150px 150px;
+        justify-content: center;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    #pieDePagina {
+        grid-template-columns: 2fr 1fr 2fr 10px;
+    }
+
+    .comentarios {
+        padding: 100px;
+    }
+
+    .fotoTabla {
+        display: flex;
+    }
+
+    .fotoPerfil {
+        width: 250px;
+        height: 250px;
+        margin-right: 20px;
+    }
+    
+    .fotoTini {
+        width: 250px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .reservas {
+        width: 180px;
+        font-size: 18px;
+    }
+
+    .fotoprod {
+        width: 200px;
+    }
+    
+    .productos {
+        grid-template-columns: 200px 200px 200px;
+        grid-gap: 40px;
+    }
+
+    .busqueda {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #facebook::after {
+        color: white;
+        content: "Rayito de Luna";
+        font-weight: bold;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+    #instagram::after {
+        color: white;
+        content: "rayito_de_luna.uy";
+        font-weight: bold;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+    #whatsapp::after {
+        color: white;
+        content: "+598 099123456";
+        font-weight: bold;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+    #correo::after {
+        color: white;
+        content: "rayito_de_luna@gmail.com";
+        font-weight: bold;
+        padding-left: 10px;
+        font-size: 15px;
+    }
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .menuEnlace {
+        text-transform: uppercase;
+    }
+
+    .logoRedes {
+        font-size: 25px;
+    }
+
+    #pieDePagina {
+        grid-template-columns: 3fr 1fr 2fr 10px;
+    }
+
+    .fotoprod {
+        width: 220px;
+    }
+    
+    .productos {
+        grid-template-columns: repeat(4, 220px);
+        grid-gap: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 1440px) {
+    #pieDePagina {
+        grid-template-columns: 5fr 1fr 2fr 10px;
+    }
+
+    .fotoprod {
+        width: 300px;
+    }
+    
+    .productos {
+        grid-template-columns: repeat(4, 300px);
+        grid-gap: 30px;
+    }
+
+}
