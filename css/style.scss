@@ -1,0 +1,394 @@
+$colorLetraMenu: #c71414;
+$blanco: #fff;
+$fondoBoton: #1c65a8;
+$fondoFooter: #68bbf1;
+$fondoSubir: #0a96f3;
+
+@mixin anchoAltura ($ancho, $altura) {
+    width: $ancho;
+    height: $altura;
+}
+
+@mixin descripRedes () {
+    color: $blanco;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+
+@mixin resolucion ($value) {
+
+    @if $value == celular {
+        @media only screen and (min-width:330px) {
+            main {
+                .infoUsuario {
+                    .fotoPerfil {
+                        @include anchoAltura(150px, 150px);
+                        margin-bottom: 20px;
+                    }
+
+                    .fotoTini {
+                        @include anchoAltura(auto, 250px);
+                        margin-bottom: 20px;
+                    }
+
+                    .agenda {
+                        .reservas {
+                            width: 115px;
+                            background-color: $fondoBoton;
+                            color: $blanco;
+                            padding: 5px;
+                            margin: 5px;
+                        }
+                    }
+                }
+
+                .busqueda {
+                    @include anchoAltura(100%, 100px);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                }
+
+                .productos {
+                    display: grid;
+                    grid-template-columns: 150px 150px;
+                    justify-content: center;
+                    text-align: center;
+                    padding-top: 5px;
+                    
+
+                    .fotoprod {
+                        @include anchoAltura(100px, 100px);
+                    }
+                }
+
+                .contenedorCarrosel {
+                    width: 250px;
+
+                    .logoONG {
+                        @include anchoAltura(200px, 200px);
+                    }
+
+                    .logoTexto {
+                        @include anchoAltura(200px, 270px);
+                    }
+                }
+            }
+
+            #subir {
+                right: 10px;
+            }
+        }
+
+    }
+
+    @else if $value == tablet {
+        @media only screen and (min-width: 768px) {
+            main {
+
+                .infoUsuario {
+                    display: flex;
+
+                    .fotoPerfil {
+                        @include anchoAltura(250px, 250px);
+                        margin-right: 20px;
+                    }
+
+                    .fotoTini {
+                        @include anchoAltura(250px, auto);
+                        margin-right: 20px;
+                    }
+
+                    .agenda {
+                        .reservas {
+                            width: 180px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .productos {
+                    grid-template-columns: 200px 200px 200px;
+                    grid-gap: 40px;
+
+                    .fotoprod {
+                        @include anchoAltura(200px, 200px);
+                    }
+                }
+
+                .busqueda {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+
+                .contenedorCarrosel {
+                    width: 500px;
+
+                    .logoONG {
+                        @include anchoAltura(300px, 300px);
+                    }
+
+                    .logoTexto {
+                        @include anchoAltura(300px, 200px);
+                    }
+                }
+            }
+
+            #pieDePagina {
+                .redes {
+                    #facebook::after {
+                        content: "Rayito de Luna";
+                        @include descripRedes();
+                    }
+
+                    #instagram::after {
+                        content: "rayito_de_luna.uy";
+                        @include descripRedes();
+                    }
+
+                    #whatsapp::after {
+                        content: "+598 099123456";
+                        @include descripRedes();
+                    }
+
+                    #correo::after {
+                        content: "rayito_de_luna@gmail.com";
+                        @include descripRedes();
+                    }
+                }
+            }
+
+            #subir {
+                right: 30px;
+            }
+        }
+
+    }
+
+    @else if $value == desktop {
+        @media only screen and (min-width: 1024px) {
+            .portada {
+                a {
+                    text-transform: uppercase;
+                }
+            }
+
+            main {
+
+                @each $boton in reservas, botonDonar, botonEnviar   {
+                    .#{$boton}:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .productos {
+                    grid-template-columns: repeat(4, 220px);
+                    grid-gap: 20px;
+
+                    .fotoprod {
+                        width: 220px;
+                    }
+
+                    .fotoprod:hover {
+                        transform: scale(1.25);
+                    }
+                }
+
+                .contenedorCarrosel {
+                    width: 700px;
+
+                    .logoONG {
+                        @include anchoAltura(500px, 500px);
+                    }
+
+                    .logoTexto {
+                        @include anchoAltura(500px, 250px);
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            #pieDePagina {
+                .redes {
+                    .logoRedes {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @else if $value == tv {
+        @media only screen and (min-width: 1440px) {
+            main {
+                .productos {
+                    grid-template-columns: repeat(4, 300px);
+                    grid-gap: 30px;
+
+                    .fotoprod {
+                        @include anchoAltura(300px, 300px);
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @include resolucion (celular);
+    @include resolucion (tablet);
+    @include resolucion (desktop);
+    @include resolucion (tv);
+}
+
+.portada {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: auto;
+
+    .menuPrincipal {
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        a {
+            color: $blanco;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        @each $clase in hover,
+        focus {
+            a:#{$clase} {
+                color: $colorLetraMenu;
+            }
+        }
+
+        button {
+            border: none;
+
+            .iconoBarra {
+                color: $blanco;
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    .imgNoticia {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .comentarios {
+
+        form {
+            padding: 10px;
+            
+            .registro {
+                border: solid 1px black;
+            }
+
+            .botonEnviar {
+                background-color: $fondoBoton;
+                color: $blanco;
+                width: 215px;
+                padding: 5px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .tarjetas {
+        margin: 0 auto;
+    }
+
+
+    .contenedorCarrosel {
+        @include anchoAltura(500px, auto);
+
+        .logoONG {
+            @include anchoAltura(350px, 350px);
+            margin: 0 auto;
+            padding: 10px;
+        }
+        
+        .logoTexto {
+            text-align: center;
+            @include anchoAltura(350px, 350px);
+            margin: 0 auto;
+        }
+    }
+
+    section {
+        .botonDonar {
+            width: 215px;
+            padding: 10px;
+            font-size: 20px;
+        }
+    }
+
+
+}
+
+#pieDePagina {
+    background-color: $fondoFooter;
+    display: flex;
+    justify-content: space-between;
+
+    .mapa {
+        grid-column: 3;
+        padding: 5px;
+    }
+
+    .redes {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .logoRedes {
+            padding: 5px;
+            color: $blanco;
+            margin-bottom: 8px;
+        }
+    }
+
+
+}
+
+#subir {
+    @include anchoAltura(40px, 40px);
+    position: fixed;
+    bottom: 50px;
+    background-color: $fondoSubir;
+    color: $blanco;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}

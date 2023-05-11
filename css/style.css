@@ -1,362 +1,294 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-.contenedorCarrosel {
-    width: 500px;
-    height: auto;
-}
-
-.logoONG {
-    width: 350px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.logoTexto {
+@media only screen and (min-width: 330px) {
+  body main .infoUsuario .fotoPerfil {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  body main .infoUsuario .fotoTini {
+    width: auto;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+  body main .infoUsuario .agenda .reservas {
+    width: 115px;
+    background-color: #1c65a8;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+  }
+  body main .busqueda {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  body main .productos {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    justify-content: center;
     text-align: center;
-    width: 350px;
-    height: 350px;
-    margin: 0 auto;
+    padding-top: 5px;
+  }
+  body main .productos .fotoprod {
+    width: 100px;
+    height: 100px;
+  }
+  body main .contenedorCarrosel {
+    width: 250px;
+  }
+  body main .contenedorCarrosel .logoONG {
+    width: 200px;
+    height: 200px;
+  }
+  body main .contenedorCarrosel .logoTexto {
+    width: 200px;
+    height: 270px;
+  }
+  body #subir {
+    right: 10px;
+  }
 }
-
-
+@media only screen and (min-width: 768px) {
+  body main .infoUsuario {
+    display: flex;
+  }
+  body main .infoUsuario .fotoPerfil {
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+  }
+  body main .infoUsuario .fotoTini {
+    width: 250px;
+    height: auto;
+    margin-right: 20px;
+  }
+  body main .infoUsuario .agenda .reservas {
+    width: 180px;
+    font-size: 18px;
+  }
+  body main .productos {
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 40px;
+  }
+  body main .productos .fotoprod {
+    width: 200px;
+    height: 200px;
+  }
+  body main .busqueda {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body main .contenedorCarrosel {
+    width: 500px;
+  }
+  body main .contenedorCarrosel .logoONG {
+    width: 300px;
+    height: 300px;
+  }
+  body main .contenedorCarrosel .logoTexto {
+    width: 300px;
+    height: 200px;
+  }
+  body #pieDePagina .redes #facebook::after {
+    content: "Rayito de Luna";
+    color: #fff;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  body #pieDePagina .redes #instagram::after {
+    content: "rayito_de_luna.uy";
+    color: #fff;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  body #pieDePagina .redes #whatsapp::after {
+    content: "+598 099123456";
+    color: #fff;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  body #pieDePagina .redes #correo::after {
+    content: "rayito_de_luna@gmail.com";
+    color: #fff;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 15px;
+  }
+  body #subir {
+    right: 30px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body .portada a {
+    text-transform: uppercase;
+  }
+  body main .reservas:hover {
+    transform: scale(1.1);
+  }
+  body main .botonDonar:hover {
+    transform: scale(1.1);
+  }
+  body main .botonEnviar:hover {
+    transform: scale(1.1);
+  }
+  body main .productos {
+    grid-template-columns: repeat(4, 220px);
+    grid-gap: 20px;
+  }
+  body main .productos .fotoprod {
+    width: 220px;
+  }
+  body main .productos .fotoprod:hover {
+    transform: scale(1.25);
+  }
+  body main .contenedorCarrosel {
+    width: 700px;
+  }
+  body main .contenedorCarrosel .logoONG {
+    width: 500px;
+    height: 500px;
+  }
+  body main .contenedorCarrosel .logoTexto {
+    width: 500px;
+    height: 250px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+  }
+  body #pieDePagina .redes .logoRedes {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body main .productos {
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 30px;
+  }
+  body main .productos .fotoprod {
+    width: 300px;
+    height: 300px;
+  }
+}
 
 .portada {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #333;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: auto;
 }
-
-.menuLista {
-    display: flex;
-    justify-content: space-around;
+.portada .menuPrincipal ul {
+  display: flex;
+  justify-content: space-around;
 }
-
-.menuEnlace {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
+.portada .menuPrincipal a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
 }
-
-.menuEnlace:hover {
-    color: #c71414;
+.portada .menuPrincipal a:hover {
+  color: #c71414;
 }
-
-.menuEnlace:focus {
-    color: #c71414;
+.portada .menuPrincipal a:focus {
+  color: #c71414;
 }
-
-.fa-bars {
-    color: #fff;
+.portada .menuPrincipal button {
+  border: none;
 }
-
-.navbar-toggler {
-    border: none;
+.portada .menuPrincipal button .iconoBarra {
+  color: #fff;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
-
-.imgNoticia {
-    padding-top: 10px;
-    padding-bottom: 10px;
+main .imgNoticia {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
-
-
-.botonEnviar {
-    background-color: #1c65a8;
-    color: white;
-    width: 215px;
-    padding: 5px;
-    font-size: 18px
+main .comentarios form {
+  padding: 10px;
 }
-
-.registroComentarios {
-    border: solid 1px black;
+main .comentarios form .registro {
+  border: solid 1px black;
 }
-
-.tarjetas {
-    margin: 0 auto;
+main .comentarios form .botonEnviar {
+  background-color: #1c65a8;
+  color: #fff;
+  width: 215px;
+  padding: 5px;
+  font-size: 18px;
 }
-
-
+main .tarjetas {
+  margin: 0 auto;
+}
+main .contenedorCarrosel {
+  width: 500px;
+  height: auto;
+}
+main .contenedorCarrosel .logoONG {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  padding: 10px;
+}
+main .contenedorCarrosel .logoTexto {
+  text-align: center;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+main section .botonDonar {
+  width: 215px;
+  padding: 10px;
+  font-size: 20px;
+}
 
 #pieDePagina {
-    background-color: #68bbf1;
-    display: grid;
-    grid-template-rows: 100%
+  background-color: #68bbf1;
+  display: flex;
+  justify-content: space-between;
 }
-
-.mapa {
-    grid-column: 3;
-    padding: 5px;
+#pieDePagina .mapa {
+  grid-column: 3;
+  padding: 5px;
 }
-
-.redes {
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
+#pieDePagina .redes {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
-
-.logoRedes {
-    padding: 5px;
-    color: #fff;
-    margin-bottom: 8px;
+#pieDePagina .redes .logoRedes {
+  padding: 5px;
+  color: #fff;
+  margin-bottom: 8px;
 }
 
 #subir {
-    height: 40px;
-    width: 40px;
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    background-color: #0a96f3;
-    color: #fff;
-    text-align: center;
-    line-height: 40px;
-    font-size: 25px;
-}
-
-
-
-
-
-@media only screen and (min-width:330px) {
-    .comentarios {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    #pieDePagina {
-        grid-template-columns: 1fr 1fr 4fr 10px;
-    }
-
-    #subir {
-        right: 15px;
-    }
-
-    .fotoPerfil {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 20px;
-    }
-
-    .fotoTini {
-        width: auto;
-        height: 250px;
-        margin-bottom: 20px;
-    }
-
-    .reservas {
-        width: 125px;
-        background-color: #1c65a8;
-        color: white;
-        padding: 5px;
-    }
-
-
-    .busqueda {
-        height: 100px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-around;
-    }
-
-
-    .fotoprod {
-        width: 100px;
-    }
-    
-    .productos {
-        display: grid;
-        grid-template-columns: 150px 150px;
-        justify-content: center;
-    }
-
-    .contenedorCarrosel {
-        width: 250px;
-    }
-   
-    .logoONG {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .logoTexto {
-        width: 200px;
-        height: 270px;
-    }
-    
-
-
-}
-
-
-
-@media only screen and (min-width: 768px) {
-    #pieDePagina {
-        grid-template-columns: 2fr 1fr 2fr 10px;
-    }
-
-    .comentarios {
-        padding: 100px;
-    }
-
-    .fotoTabla {
-        display: flex;
-    }
-
-    .fotoPerfil {
-        width: 250px;
-        height: 250px;
-        margin-right: 20px;
-    }
-    
-    .fotoTini {
-        width: 250px;
-        height: auto;
-        margin-right: 20px;
-    }
-
-    .reservas {
-        width: 180px;
-        font-size: 18px;
-    }
-
-    .fotoprod {
-        width: 200px;
-    }
-    
-    .productos {
-        grid-template-columns: 200px 200px 200px;
-        grid-gap: 40px;
-    }
-
-    .busqueda {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .contenedorCarrosel {
-        width: 500px;
-    }
-   
-    .logoONG {
-        width: 300px;
-        height: 300px;
-    }
-    
-    .logoTexto {
-        width: 300px;
-        height: 200px;
-    }
-
-    #facebook::after {
-        color: white;
-        content: "Rayito de Luna";
-        font-weight: bold;
-        padding-left: 10px;
-        font-size: 15px;
-    }
-
-    #instagram::after {
-        color: white;
-        content: "rayito_de_luna.uy";
-        font-weight: bold;
-        padding-left: 10px;
-        font-size: 15px;
-    }
-
-    #whatsapp::after {
-        color: white;
-        content: "+598 099123456";
-        font-weight: bold;
-        padding-left: 10px;
-        font-size: 15px;
-    }
-
-    #correo::after {
-        color: white;
-        content: "rayito_de_luna@gmail.com";
-        font-weight: bold;
-        padding-left: 10px;
-        font-size: 15px;
-    }
-
-
-}
-
-@media only screen and (min-width: 1024px) {
-    .menuEnlace {
-        text-transform: uppercase;
-    }
-
-    .logoRedes {
-        font-size: 25px;
-    }
-
-    #pieDePagina {
-        grid-template-columns: 3fr 1fr 2fr 10px;
-    }
-
-    .fotoprod {
-        width: 220px;
-    }
-    
-    .productos {
-        grid-template-columns: repeat(4, 220px);
-        grid-gap: 20px;
-    }
-
-    .contenedorCarrosel {
-        width: 700px;
-    }
-   
-    .logoONG {
-        width: 500px;
-        height: 500px;
-    }
-    
-    .logoTexto {
-        width: 500px;
-        height: 250px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 20px;
-    }
-}
-
-
-@media only screen and (min-width: 1440px) {
-    #pieDePagina {
-        grid-template-columns: 5fr 1fr 2fr 10px;
-    }
-
-    .fotoprod {
-        width: 300px;
-    }
-    
-    .productos {
-        grid-template-columns: repeat(4, 300px);
-        grid-gap: 30px;
-    }
-
-}
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 50px;
+  background-color: #0a96f3;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 25px;
+}/*# sourceMappingURL=style.css.map */
