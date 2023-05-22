@@ -9,9 +9,25 @@ html {
 }
 
 @media only screen and (min-width: 330px) {
+  body .portada {
+    height: 300px;
+  }
+  body .portada .logoPortada {
+    width: 250px;
+    height: 250px;
+  }
+  body main .infoUsuario .infoTabla .italic {
+    font-style: italic;
+    display: inline;
+  }
   body main .infoUsuario .fotoPerfil {
     width: 150px;
     height: 150px;
+    margin-bottom: 20px;
+  }
+  body main .infoUsuario .fotoPepe {
+    width: 200px;
+    height: auto;
     margin-bottom: 20px;
   }
   body main .infoUsuario .fotoTini {
@@ -29,10 +45,11 @@ html {
   body main .busqueda {
     width: 100%;
     height: 100px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   body main .productos {
     display: grid;
@@ -67,6 +84,11 @@ html {
   body main .infoUsuario .fotoPerfil {
     width: 250px;
     height: 250px;
+    margin-right: 20px;
+  }
+  body main .infoUsuario .fotoPepe {
+    width: 300px;
+    height: auto;
     margin-right: 20px;
   }
   body main .infoUsuario .fotoTini {
@@ -134,17 +156,36 @@ html {
   }
 }
 @media only screen and (min-width: 1024px) {
+  body .portada {
+    height: 400px;
+  }
+  body .portada .logoPortada {
+    width: 350px;
+    height: 350px;
+  }
   body .portada a {
     text-transform: uppercase;
   }
   body main .reservas:hover {
     transform: scale(1.1);
   }
+  body main .reservas {
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+  }
   body main .botonDonar:hover {
     transform: scale(1.1);
   }
+  body main .botonDonar {
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+  }
   body main .botonEnviar:hover {
     transform: scale(1.1);
+  }
+  body main .botonEnviar {
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
   }
   body main .productos {
     grid-template-columns: repeat(4, 220px);
@@ -152,6 +193,8 @@ html {
   }
   body main .productos .fotoprod {
     width: 220px;
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
   }
   body main .productos .fotoprod:hover {
     transform: scale(1.25);
@@ -188,7 +231,7 @@ html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-repeat: no-repeat;
   background-size: contain;
-  height: auto;
+  text-align: center;
 }
 .portada .menuPrincipal ul {
   display: flex;

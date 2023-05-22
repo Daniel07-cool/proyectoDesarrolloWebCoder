@@ -21,10 +21,31 @@ $fondoSubir: #0a96f3;
 
     @if $value == celular {
         @media only screen and (min-width:330px) {
+            .portada {
+                height: 300px;
+
+                .logoPortada {
+                    @include anchoAltura(250px, 250px);
+                }
+            }
+
+            
             main {
                 .infoUsuario {
+                    .infoTabla {
+                        .italic {
+                            font-style: italic;
+                            display: inline;
+                        }
+                    }
+
                     .fotoPerfil {
                         @include anchoAltura(150px, 150px);
+                        margin-bottom: 20px;
+                    }
+
+                    .fotoPepe {
+                        @include anchoAltura(200px, auto);
                         margin-bottom: 20px;
                     }
 
@@ -46,10 +67,11 @@ $fondoSubir: #0a96f3;
 
                 .busqueda {
                     @include anchoAltura(100%, 100px);
+                    padding: 10px;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
-                    justify-content: space-around;
+                    justify-content: space-between;
                 }
 
                 .productos {
@@ -94,6 +116,11 @@ $fondoSubir: #0a96f3;
 
                     .fotoPerfil {
                         @include anchoAltura(250px, 250px);
+                        margin-right: 20px;
+                    }
+
+                    .fotoPepe {
+                        @include anchoAltura(300px, auto);
                         margin-right: 20px;
                     }
 
@@ -172,6 +199,12 @@ $fondoSubir: #0a96f3;
     @else if $value == desktop {
         @media only screen and (min-width: 1024px) {
             .portada {
+                height: 400px;
+
+                .logoPortada {
+                    @include anchoAltura(350px, 350px);
+                }
+
                 a {
                     text-transform: uppercase;
                 }
@@ -182,6 +215,12 @@ $fondoSubir: #0a96f3;
                 @each $boton in reservas, botonDonar, botonEnviar   {
                     .#{$boton}:hover {
                         transform: scale(1.1);
+                        
+                    }
+
+                    .#{$boton} {
+                        transition: all 0.5s;
+                        transition-timing-function: ease-in-out;
                     }
                 }
 
@@ -191,6 +230,8 @@ $fondoSubir: #0a96f3;
 
                     .fotoprod {
                         width: 220px;
+                        transition: all 0.5s;
+                        transition-timing-function: ease-in-out;
                     }
 
                     .fotoprod:hover {
@@ -263,9 +304,12 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-repeat: no-repeat;
     background-size: contain;
-    height: auto;
+    text-align: center;
+    
+    
 
     .menuPrincipal {
+
         ul {
             display: flex;
             justify-content: space-around;
