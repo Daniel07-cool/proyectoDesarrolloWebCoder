@@ -51,6 +51,11 @@ html {
     align-items: flex-start;
     justify-content: space-between;
   }
+  body main .busqueda .logoCarrito {
+    font-size: 25px;
+    margin-right: 15px;
+    color: #1c65a8;
+  }
   body main .productos {
     display: grid;
     grid-template-columns: 150px 150px;
@@ -187,6 +192,13 @@ html {
     transition: all 0.5s;
     transition-timing-function: ease-in-out;
   }
+  body main .btn-primary:hover {
+    transform: scale(1.1);
+  }
+  body main .btn-primary {
+    transition: all 0.5s;
+    transition-timing-function: ease-in-out;
+  }
   body main .productos {
     grid-template-columns: repeat(4, 220px);
     grid-gap: 20px;
@@ -265,6 +277,9 @@ main {
 main .imgNoticia {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+main .productos .precio {
+  display: inline-block;
 }
 main .comentarios form {
   padding: 10px;
