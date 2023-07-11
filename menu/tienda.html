@@ -12,6 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Tienda</title>
 </head>
@@ -57,7 +58,50 @@
                 <button class="btn btn-primary" type="button">Buscar</button>
             </form>
             <div class="dropdown ">
-                <i class="fa-solid fa-cart-shopping logoCarrito"></i>
+                <div>
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal"><i
+                            class="fa-solid fa-cart-shopping logoCarrito"></i></button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Carrito de Compras</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <table id="tableCarrito" class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Producto</th>
+                                                <th scope="col">Precio</th>
+                                                <th scope="col">Cantidad</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="items">
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Total: </th>
+                                                <th></th>
+                                                <th id="total"></th>
+                                                <th></th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
                     Filtrar por
                 </button>
@@ -73,7 +117,7 @@
                 <img class="fotoprod" src="../img/comidaPerro.png" alt="Ración Pedigree Adultos">
                 <p class="infoProducto"><strong>Ración Pedigree Adultos</strong></p>
                 <div class="comprarProducto">
-                    <button class="btn btn-primary" type="button">Agregar Carrito</button>
+                    <button id="btn_1" class="btn btn-primary" type="button">Agregar Carrito</button>
                     <p class="precio">$329</p>
                 </div>
             </article>
@@ -81,7 +125,7 @@
                 <img class="fotoprod" src="../img/arnex.jpg" alt="Pretal Doris Ajustable">
                 <p class="infoProducto"><strong>Pretal Doris Ajustable</strong></p>
                 <div class="comprarProducto">
-                    <button class="btn btn-primary" type="button">Agregar Carrito</button>
+                    <button id="btn_2" class="btn btn-primary" type="button">Agregar Carrito</button>
                     <p class="precio">$350</p>
                 </div>
             </article>
@@ -89,7 +133,7 @@
                 <img class="fotoprod" src="../img/comidaGato.png" alt="Ración Maxine Adultos">
                 <p class="infoProducto"><strong>Ración Maxine Adultos</strong></p>
                 <div class="comprarProducto">
-                    <button class="btn btn-primary" type="button">Agregar Carrito</button>
+                    <button id="btn_3" class="btn btn-primary" type="button">Agregar Carrito</button>
                     <p class="precio">$480</p>
                 </div>
             </article>
@@ -97,7 +141,7 @@
                 <img class="fotoprod" src="../img/cajaTransporte.jpg" alt="Transportador para felino">
                 <p class="infoProducto"><strong>Transportador para felino</strong></p>
                 <div class="comprarProducto">
-                    <button class="btn btn-primary" type="button">Agregar Carrito</button>
+                    <button id="btn_4" class="btn btn-primary" type="button">Agregar Carrito</button>
                     <p class="precio">$1209</p>
                 </div>
             </article>
@@ -105,7 +149,7 @@
                 <img class="fotoprod" src="../img/camaPerrosGatos.jpg" alt="cama pet afelpada">
                 <p class="infoProducto"><strong>Cama pet afelpada</strong></p>
                 <div class="comprarProducto">
-                    <button class="btn btn-primary" type="button">Agregar Carrito</button>
+                    <button id="btn_5" class="btn btn-primary" type="button">Agregar Carrito</button>
                     <p class="precio">$699</p>
                 </div>
             </article>
@@ -113,7 +157,7 @@
                 <img class="fotoprod" src="../img/piedrasGatos.jpg" alt="Piedra aglomerantes">
                 <p class="infoProducto"><strong>Piedra aglomerantes</strong></p>
                 <div class="comprarProducto">
-                    <button class="btn btn-primary" type="button">Agregar Carrito</button>
+                    <button id="btn_6" class="btn btn-primary" type="button">Agregar Carrito</button>
                     <p class="precio">$580</p>
                 </div>
             </article>
@@ -121,7 +165,7 @@
                 <img class="fotoprod" src="../img/prednisolona.jpeg" alt="prednisolona">
                 <p class="infoProducto"><strong>Prednisolona</strong></p>
                 <div class="comprarProducto">
-                    <button class="btn btn-primary" type="button">Agregar Carrito</button>
+                    <button id="btn_7" class="btn btn-primary" type="button">Agregar Carrito</button>
                     <p class="precio">$120</p>
                 </div>
             </article>
@@ -129,7 +173,7 @@
                 <img class="fotoprod" src="../img/shampooPerros.jpg" alt="Shampoo Dominal">
                 <p class="infoProducto"><strong>Shampoo Dominal</strong></p>
                 <div class="comprarProducto">
-                    <button class="btn btn-primary" type="button">Agregar Carrito</button>
+                    <button id="btn_8" class="btn btn-primary" type="button">Agregar Carrito</button>
                     <p class="precio">$280</p>
                 </div>
             </article>
@@ -160,12 +204,18 @@
         <i class="fa-duotone fa-caret-up"></i>
     </a>
 
+    <script src="../js/usuario.js"></script>
+    <script src="../js/producto.js"></script>
+    <script src="../js/app.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </body>
 
