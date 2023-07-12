@@ -56,6 +56,9 @@ html {
     margin-right: 15px;
     color: #1c65a8;
   }
+  body main .busqueda .modalCarrito {
+    display: inline;
+  }
   body main .productos {
     display: grid;
     grid-template-columns: 150px 150px;
