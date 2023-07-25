@@ -291,6 +291,9 @@ main .imgNoticia {
 main .productos .precio {
   display: inline-block;
 }
+main .busqueda .btnModalCerrar {
+  position: absolute;
+}
 main .comentarios form {
   padding: 10px;
 }

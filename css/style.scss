@@ -82,6 +82,7 @@ $fondoSubir: #0a96f3;
                     .modalCarrito {
                         display: inline;
                     }
+
                 }
 
                 .productos {
@@ -369,6 +370,12 @@ main {
     .productos {
         .precio {
             display: inline-block;
+        }
+    }
+
+    .busqueda {
+        .btnModalCerrar {
+            position: absolute;
         }
     }
 
