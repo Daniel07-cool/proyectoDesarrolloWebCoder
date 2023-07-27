@@ -8,7 +8,9 @@ let departamento = '';
 let ciudad = '';
 
 const btnRegistrarUsuario = document.querySelector('#btnRegistrarUsuario');
-let sessionUsuario = document.getElementById('sessionUsuario'); // Obtengo el menu enlace en acceder.html para agregarle texto según corresponda
+const sessionUsuario = document.getElementById('test'); // Obtengo el menu enlace en acceder.html para agregarle texto según corresponda
+console.log(sessionUsuario);
+localStorage.setItem('btnSessionUsuario', JSON.stringify(sessionUsuario));
 const btnFinalizarCompra = document.getElementById('btnFinalizarCompra');
 
 function traerItems() { // Se llama esta función cada vez que se recarga la página
@@ -31,6 +33,7 @@ function allEventListeners() {
     btnRegistrarUsuario.addEventListener('click', (e) => {
         e.preventDefault();
         guardarDatosRegistro();
+        sessionUsuario.innerText = 'Cerrar Sessión';
     });
     
     document.querySelector('#inputEmail').addEventListener('change', () => {

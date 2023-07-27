@@ -1,7 +1,4 @@
 // Creo los objetos de la Tienda y los agrego al array "productos"
-
-
-
 const productos = [];
 productos.push(new Producto("Ración Pedigree Adultos", "Perro", 329, 1, "../img/comidaPerro.png"));
 productos.push(new Producto("Pretal Doris Ajustable", "Perro", 350, 1, "../img/arnex.jpg"));
@@ -14,17 +11,15 @@ productos.push(new Producto("Shampoo Dominal", "Perro o Gato", 280, 1, "../img/s
 
 localStorage.setItem('stock', JSON.stringify(productos)); // Guardo los productos en el localStorage
 
-
+// DEclaro variables globales
 let stock = [];
 let carrito = [];
 let tabla = [];
-
-
 const total = document.getElementById('total'); // fila que va registrar el total de carrito
 total.innerText = 0;
 const bodyTabla = document.getElementById('items'); // cuerpo de la tabla que se va agregar filas del carrrito
-const btnCarrito = document.getElementById('btnCarrito');
-const itemGato = document.getElementById('productoGato');
+const btnCarrito = document.getElementById('btnCarrito'); 
+const itemGato = document.getElementById('productoGato'); // opción de filtrar por Gatos
 const itemPerro = document.getElementById('productoPerro');
 const sectionProd = document.getElementById('idProductos');
 
@@ -50,10 +45,62 @@ function agregarCarrito(i) { // Se agrega el producto (si no existe) seleccionad
     dibujarTabla();
 }
 
+function allEventListenersBtnAgregarProdGato() { // Para escuchar los eventos después de filtrar por productos
+    document.getElementById("btn_3").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(3);
+    });
+    document.getElementById("btn_4").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(4);
+    });
+    document.getElementById("btn_5").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(5);
+    });
+    document.getElementById("btn_6").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(6);
+    });
+    document.getElementById("btn_7").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(7);
+    });
+    document.getElementById("btn_8").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(8);
+    });
+}
+
+function allEventListenersBtnAgregarProdPerro() {
+    document.getElementById("btn_1").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(1);
+    });
+    document.getElementById("btn_2").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(2);
+    });
+    document.getElementById("btn_4").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(4);
+    });
+    document.getElementById("btn_5").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(5);
+    });
+    document.getElementById("btn_7").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(7);
+    });
+    document.getElementById("btn_8").addEventListener('click', (e) => {
+        e.preventDefault();
+        agregarCarrito(8);
+    });
+}
 
 
-
-function allEventListeners() {
+function allEventListeners() { // Todos los eventos de escucha
     document.addEventListener('DOMContentLoaded', traerItems);
 
     document.getElementById("btn_1").addEventListener('click', (e) => {
@@ -89,8 +136,6 @@ function allEventListeners() {
         agregarCarrito(8);
     });
 
-
-
     btnFinalizarCompra.onclick = () => {
         Swal.fire({
             title: 'Compra realizada',
@@ -103,16 +148,19 @@ function allEventListeners() {
         localStorage.setItem('carrito', JSON.stringify(carrito));
     }
 
-
     itemGato.addEventListener('click', (e) => {
         e.preventDefault();
         filtrarProductos('Gato');
+        allEventListenersBtnAgregarProdGato();
     });
 
     itemPerro.addEventListener('click', (e) => {
         e.preventDefault();
         filtrarProductos('Perro');
+        allEventListenersBtnAgregarProdPerro()
     });
+
+
 
 
 }
@@ -152,8 +200,6 @@ function filtrarProductos(tipoMascota) {
         });
 }
 
-
-
 function alertProductoAgregado(nomProducto) {
     Swal.fire({
         title: 'Producto Agregado',
@@ -190,17 +236,12 @@ function nuevaFila(item, index) {
     td = document.createElement('td');
     td.textContent = item.cantidad;
     row.appendChild(td);
-
-
-
     ///agrego una nueva celda con el boton eliminar
     td = document.createElement('td');
     const btnEliminar = document.createElement('button');
     btnEliminar.classList.add('btn', 'btn-danger');
     btnEliminar.textContent = 'Borrar';
-
-    ///cuando hace click se debe eliminar del CARRITO el elemento
-    // actualizar el localstorage y actualizar la tabla
+    ///cuando hace click se debe eliminar del CARRITO el elemento, actualizar el localstorage y actualizar la tabla
     btnEliminar.onclick = () => {
         carrito.splice(index, 1); ///le envio el indice y la cantidad de 1 (porque voy a borrar solo 1)
         dibujarTabla();
