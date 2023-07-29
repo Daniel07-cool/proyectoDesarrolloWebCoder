@@ -1,16 +1,3 @@
-// Creo los objetos de la Tienda y los agrego al array "productos"
-const productos = [];
-productos.push(new Producto("Ración Pedigree Adultos", "Perro", 329, 1, "../img/comidaPerro.png"));
-productos.push(new Producto("Pretal Doris Ajustable", "Perro", 350, 1, "../img/arnex.jpg"));
-productos.push(new Producto("Ración Maxine Adultos", "Gato", 480, 1, "../img/comidaGato.png"));
-productos.push(new Producto("Transportador para felino", "Perro o Gato", 1209, 1, "../img/cajaTransporte.jpg"));
-productos.push(new Producto("Cama pet afelpada", "Perro o Gato", 699, 1, "../img/camaPerrosGatos.jpg"));
-productos.push(new Producto("Piedra aglomerantes", "Gato", 580, 1, "../img/piedrasGatos.jpg"));
-productos.push(new Producto("Prednisolona", "Perro o Gato", 120, 1, "../img/prednisolona.jpeg"));
-productos.push(new Producto("Shampoo Dominal", "Perro o Gato", 280, 1, "../img/shampooPerros.jpg"));
-
-localStorage.setItem('stock', JSON.stringify(productos)); // Guardo los productos en el localStorage
-
 // DEclaro variables globales
 let stock = [];
 let carrito = [];
@@ -25,7 +12,17 @@ const sectionProd = document.getElementById('idProductos');
 
 
 function traerItems() { // Se llama esta función cada vez que se recarga la página
-    stock = JSON.parse(localStorage.getItem('stock')) || [];
+    fetch('../js/stock.json')
+        .then((response) => {
+            if (response.ok) {
+                return response.json(); ///convierto los objetos de json a javascript
+            } else {
+               console.log('No se pudo traer los productos en stock del archivo JSON');
+            }
+        })
+        .then((productos) => {
+            stock = productos;
+        })
     carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 }
 

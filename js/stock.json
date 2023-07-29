@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nombre": "Ración Pedigree Adultos",
+        "tipo": "Perro",
+        "precio": 329,
+        "cantidad": 1,
+        "urlImagen": "../img/comidaPerro.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Pretal Doris Ajustable",
+        "tipo": "Perro",
+        "precio": 350,
+        "cantidad": 1,
+        "urlImagen": "../img/arnex.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Ración Maxine Adultos",
+        "tipo": "Gato",
+        "precio": 480,
+        "cantidad": 1,
+        "urlImagen": "../img/comidaGato.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Transportador para felino",
+        "tipo": "Perro o Gato",
+        "precio": 1209,
+        "cantidad": 1,
+        "urlImagen": "../img/cajaTransporte.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Cama pet afelpada",
+        "tipo": "Perro o Gato",
+        "precio": 699,
+        "cantidad": 1,
+        "urlImagen": "../img/camaPerrosGatos.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Piedra aglomerantes",
+        "tipo": "Gato",
+        "precio": 580,
+        "cantidad": 1,
+        "urlImagen": "../img/piedrasGatos.jpg" 
+    },
+    {
+        "id": 7,
+        "nombre": "Prednisolona",
+        "tipo": "Perro o Gato",
+        "precio": 120,
+        "cantidad": 1,
+        "urlImagen": "../img/prednisolona.jpeg" 
+    },
+    {
+        "id": 8,
+        "nombre": "Shampoo Dominal",
+        "tipo": "Perro o Gato",
+        "precio": 280,
+        "cantidad": 1,
+        "urlImagen": "../img/shampooPerros.jpg"
+    }
+]
