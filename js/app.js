@@ -17,7 +17,12 @@ function traerItems() { // Se llama esta función cada vez que se recarga la pá
             if (response.ok) {
                 return response.json(); ///convierto los objetos de json a javascript
             } else {
-               console.log('No se pudo traer los productos en stock del archivo JSON');
+                Toastify({
+                    text:"Estamos teniendo problemas con el servidor, por favor vuelva más tarde",
+                    duration: -1,
+                    close: true,
+                    gravity: 'top',
+                }).showToast();
             }
         })
         .then((productos) => {
