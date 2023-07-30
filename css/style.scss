@@ -92,6 +92,9 @@ $fondoSubir: #0a96f3;
                     text-align: center;
                     padding-top: 5px;
                     
+                    .infoProducto {
+                        font-size: 15px;
+                    }
 
                     .fotoprod {
                         @include anchoAltura(100px, 100px);
