@@ -212,6 +212,13 @@ function dibujarTabla() {
     carrito.forEach((item, index) => {
         nuevaFila(item, index);
     });
+    let contador = document.getElementById('notificacionCarrito'); // Notificacion para indicar nuevo elemento al carrito
+    if (carrito.length !== 0){
+        contador.classList.remove('d-none');
+        contador.innerText = `${carrito.length}`
+    }else{
+        contador.classList.add('d-none');
+    }
 }
 
 function nuevaFila(item, index) {

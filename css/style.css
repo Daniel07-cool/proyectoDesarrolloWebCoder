@@ -290,9 +290,22 @@ main .imgNoticia {
 }
 main .productos .precio {
   display: inline-block;
+  margin-left: 5px;
 }
 main .busqueda .btnModalCerrar {
   position: absolute;
+}
+main .busqueda #notificacionCarrito {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  margin-left: -5px;
+  border-radius: 100%;
+  color: white;
+  background-color: #d61709;
+  font-weight: bold;
+  font-size: 10px;
+  text-align: center;
 }
 main .comentarios form {
   padding: 10px;
